@@ -1,0 +1,14 @@
+.row {
+    background: #f8f9fa;
+    margin: 5px;
+    padding: 10px;
+  }
+  
+  .col {
+    border: solid 1px #6c757d;
+    padding: 10px;
+  }
+  
+  #slider {
+    margin: 10px;
+  }
