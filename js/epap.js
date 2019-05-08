@@ -3,6 +3,8 @@ var fields = [];
 var font_size = 22;
 var demoElement=$(".demoElement")
 var slider = $("#slider")
+var slider_x = $("#slider-x")
+var text_y = font_size;
 /* Append an <svg> element to an HTML element */
 var svg = Pablo(demoElement).svg({
     width: 640,
@@ -23,12 +25,12 @@ svg.rect({width:640, height:384})
     // Add events
     
     text = svg.text({
-        x:5, y:50,
+        x:5, y:text_y,
         fill:'black',
         width: 640,
         'font-size': font_size.toString() +"px",
         'font-family':'sans-serif',
-        'textLength': '120%'
+        'textLength': '630px'
     });
     
     
@@ -48,7 +50,7 @@ $('.confirm_appointment').change(function(e) {
 });
 $("#slider").slider(
     {
-                value:50,
+                value:10,
                 min: 0,
                 max: 80,
                 step: 1,
@@ -58,4 +60,18 @@ $("#slider").slider(
     }
 );
 $('#slider').slider('value');
+
+$("#slider-x").slider(
+    {
+                value:10,
+                min: text_y,
+                max: 384,
+                orientation: "vertical",
+                step: 1,
+                slide: function( event, ui ) {
+                   text.attr('y',ui.value.toString());
+                }
+    }
+);
+$('#slider-x').slider('value');
 
