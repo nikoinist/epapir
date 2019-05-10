@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+     <!-- Compiled and minified JavaScript -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> 
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
@@ -14,28 +19,31 @@
 </head>
 <body>
 <div class="container">
-    <div class="demoElement row">
-
+    
         <form name='confirm_appointment' method='post' class='confirm_appointment'>
             <div class="row">
-                <div class="col">
+                <div class="col s12">
                  <input type='text' name="hello"/>
                 </div>
-                <div  class="col">
+            
+                <div  class="col s6">
                     <!-- <input type='text' name="hi" value='22'/> -->
                     <div id="slider"></div>
+                </div>
+                <div class=" col s6">
                     <div id="slider-x"></div>
                 </div>
-            </div>
-            <div class = "row">
-              <input type='submit' class='update_appointment_button' value='submits' />
+                <div class = "row">
+                <input type='submit' class='update_appointment_button' value='submit' />
+                </div>
             </div>
         </form>
-    </div>
+        <div class="demoElement col s6"></div>
+        
+        <div class="img s6"></div>
     <div id="slider"></div>
 </div>
     <script src="/js/epap.js"></script>
-    <link rel="stylesheet" href="/css/style.css">
     
 </body>
 </html>

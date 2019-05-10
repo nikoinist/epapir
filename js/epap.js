@@ -34,7 +34,7 @@ svg.rect({width:640, height:384})
     });
     
     
-$('.confirm_appointment').change(function(e) {
+$('.confirm_appointment').keyup(function(e) {
     
     e.preventDefault();
     fields = $(this).serializeArray();
@@ -75,3 +75,9 @@ $("#slider-x").slider(
 );
 $('#slider-x').slider('value');
 
+$('.confirm_appointment').submit(function(e) {
+    e.preventDefault();
+     var img = svg.toImage();
+     img.appendTo(".img")
+
+});
